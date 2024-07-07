@@ -1,0 +1,53 @@
+div {
+  font-family: sans-serif;
+  font-size: 30px;
+  text-align: center;
+  font-family: inherit;
+  background-color: #f2efe8;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+}
+
+
+.sort .empty, .post {
+  display: table-row;
+}
+
+.post > span, .post > button {
+  display: table-cell;
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap; 
+}
+
+.post .post-content {
+  width: 90%; 
+}
+
+
+div button {
+  background-color: #743ead;
+  color: white;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 4px 2px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+div button:hover {
+  background-color: #090909;
+}
+
+
+a{
+  margin: 0 20px; 
+  padding: 5px; 
+}

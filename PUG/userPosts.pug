@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title #{username}'s Posts
+    link(rel="stylesheet", href="/resources/css/main.css")
+    link(rel="stylesheet", href="/resources/css/userPosts.css")
+    script(src="/resources/js/userPosts.js")
+  body.userPosts
+      nav
+          p Share beautiful moments
+          a(href="/posts") home
+          button(type='button' onclick='window.location="/createPost"') Create Post
+      content
+        h1 #{username}'s Recent Posts
+        button(data-sort-type='mostLikes') Sort by Most Likes
+        button(data-sort-type='leastLikes') Sort by Least Likes
+        if posts.length > 0
+          .allposts
+            each post in posts
+              form(action='/update-post/' + post.post_id, method='post')
+                  span.post-time Time Posted: #{post.formattedCreatedAt} 
+                  .likecount #{post.like_count} Likes
+                  button.button-delete(type='button', data-post-id=post.post_id) Delete
+                  span  | Post ID #{post.post_id}
+                  span : #{post.content}
+                  br
+                  label(for='content') Edit Your Post:
+                  textarea(name='content', required)= post.content
+                  button(type='submit') Update Post
+        else
+          p No posts found.

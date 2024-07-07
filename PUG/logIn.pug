@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        title LogIn
+        script(src="/resources/js/logIn.js")
+        link(rel="stylesheet", href="/resources/css/main.css")
+        link(rel="stylesheet", href="/resources/css/login.css")
+    body.logIn
+        nav
+            p Share beautiful moments
+            a(href="/posts") home
+        h1 Create New Post
+        h2 Login
+        form
+          label(for='username') username:
+          input(type='text', placeholder='username', name='username')
+          br
+          label(for='password') password:
+          input(type='password', placeholder='password', name='password')
+          br
+          button(type='submit').bt Sign In
+          a(href="/signUp").bt Sign Up

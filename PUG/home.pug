@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        title Home
+        script(src="/resources/js/home.js")
+        link(rel="stylesheet", href="/resources/css/main.css")
+        link(rel="stylesheet", href="/resources/css/home.css")
+    body.home
+        nav
+            p Share beautiful moments
+            a(href="/posts") home
+            button(type='button' onclick='window.location="/createPost"') Create Post
+            button.login Login
+        h1 Fangle
+
+        div
+            .sort
+                button#most Sort by Most Likes
+                button#least Sort by Least Likes
+            each post in posts
+                .post
+                    span.post-username= post.username
+                    span.post-content= post.content
+                    span.post-date= post.created_at.toLocaleString()
+                    span.likecount= post.like_count + ' likes'
+                    button.like(data-id=post.post_id onclick='updateLike(this)')= post.liked ? 'Unlike' : 'Like'
+            if totalPages > 1
+                .pagination
+                    if currentPage > 1
+                        a(href=`/posts?page=${currentPage - 1}`) Prev
+                    - var startPage = Math.max(1, currentPage - 2)
+                    - var endPage = Math.min(totalPages, currentPage + 2)
+                    - for (var pageNum = startPage; pageNum <= endPage; pageNum++)
+                        a(href=`/posts?page=${pageNum}` class=(pageNum === currentPage ? 'active' : ''))= pageNum
+                    if currentPage < totalPages
+                        a(href=`/posts?page=${currentPage + 1}`) Next

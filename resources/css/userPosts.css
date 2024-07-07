@@ -1,0 +1,37 @@
+.likecount {
+    margin-left: auto;
+    margin-bottom: 5px;
+    padding: 1px 1px;
+    background-color: #6200ea;
+    color: white;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+}
+  
+
+.button-delete {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+  
+.button-delete:hover {
+    background-color: #aa0d0d;
+}
+
+.post{
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: center;
+    font-family: inherit;
+    background-color: #f2efe8;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px;
+  }

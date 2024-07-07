@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    head
+        title Create Post
+        link(rel="stylesheet", href="/resources/css/main.css")
+        link(rel="stylesheet", href="/resources/css/createPost.css")
+    body.createPost
+        nav
+            p Share beautiful moments
+            a(href="/posts") home
+            button(type='button' onclick='window.location="/createPost"') Create Post
+        h1 Create New Post
+        form(action='/posts', method='post')
+            label(for='content') Your Post:
+            textarea(name='content', required)
+            br
+            button(type='submit', class='bt') Post
+            a.bt(href='/posts') Cancel

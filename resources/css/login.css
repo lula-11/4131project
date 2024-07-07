@@ -1,0 +1,28 @@
+.bt {
+    text-decoration: none;
+    background-color: #743ead;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 30px;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  h2 {
+    text-align: center;
+  }
+  
+  .bt:hover {
+    background-color: #090909;
+  }
+
+  form {
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: center;
+    font-family: inherit;
+    background-color: #f2efe8;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px;
+  }

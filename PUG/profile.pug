@@ -1,0 +1,24 @@
+doctype html
+doctype html
+html(lang="en")
+    head
+        title Profile
+        script(src="/resources/js/profile.js")
+        link(rel="stylesheet", href="/resources/css/main.css")
+        link(rel="stylesheet", href="/resources/css/profile.css")
+    body.profile
+        nav
+            p Share beautiful moments
+            a(href="/posts") home
+            button(type='button' onclick='window.location="/createPost"') Create Post
+        content
+            h1  User Profile
+            label(for='username') username:
+            input(type='text', id='username', value=user.username, readonly)
+            img(src='/resources/images/1.jpg', alt='User Photo')
+            .user-details
+                button#userpost(type='button') Recent Posts
+                button#quit-button(type='button') Log Out
+                button#deleteAccount-button(type='button') Delete Account
+                        
+
